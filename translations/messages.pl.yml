@@ -1,0 +1,24 @@
+about: 'o mnie'
+projects: 'projekty'
+about-me-1: "Swoją karierę rozpoczałem w 2021 roku, zaczynając od stażu w niedużym software house, ucząc się PHP."
+about-me-2: "Zarówno język, jak i koncepcja pisania stron internetowych, od razu mi się spodobała. Przez pierwsze 2 miesiące dokładałem
+ starań do swojej nauki, co zapewniło mi stałe stanowisko i możliwość dalszego rozwoju już na prawdziwym projekcie."
+about-me-3:  "Po ponad 2 latach pracy nad projektami, uważam się za średnio-zaawanoswanego programistę, z dobrą znajomością
+   programowania obiektowego, git'a, SQL'owych baz danych, Symfony, js, css oraz innych narzędzi do budowy i rozwoju aplikacji webowych.
+   Nie są mi obce również technologie takie jak docker, elasticsearch, redis, REST/SOAP api."
+pso-title: 'Platforma Opon'
+pso-description: "Platforma Opon to największa strona do sprzedaży hurtowej opon w Polsce. Ogromny i utrzymywany od wielu lat projekt był dla mnie
+dużym wyzwaniem, gdy zaczynałem nad nim pracę w 2022 roku. Duża ilość plików i niekiedy kod sięgający roku 2014 nauczyły mnie pracy i utrzymywania projektów na dużą skalę.
+Gdy poznałem lepiej projekt, pracowaliśmy nad nim w małym, 2-osobowym zespole, więc w zakresie moich obowiązków było wszystko od poprawiania usterek wizualnych,
+ do integracji z zewnętrznymi serwisami jak allegro czy przelewy24 i stworzenie całej logiki stojącej za kupnem 'abonamentu'."
+pso-tech_stack: "Symfony 4.2, PHP 7.4, PostgreSQL, Redis, ElasticSearch, Docker"
+cbre-title: "CBRE dostawcy"
+cbre-description: "Krótki solowy projekt prostej aplikacji webowej do zarządzania dostawcami i ich przeglądania. 
+Aplikacja składa się z katalogu, tworzenia i edycji dostawców."
+cbre-tech_stack: "Symfony 6.2, PHP 8.0, MySQL, Docker"
+flowtly-title: "Flowtly"
+flowtly-description: "Aplikacja do zarządzania firmą. Był to mój pierwszy projekt, na którym uczyłem się podstaw,
+ robiąc logikę biznesową, m.in. akceptowania dni wolnych przez pracowników,
+  grupowania dni wolnych oraz dodawania 'feedbacku' dla pracowników"
+flowtly-tech_stack: "Symfony 6.2, PHP 8.0, MySQL"
+change_language: 'Zmień język na angielski'

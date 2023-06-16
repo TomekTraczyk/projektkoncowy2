@@ -1,0 +1,121 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <nav class="navbar navbar-light fixed-top" style="height: 70px">
+        <div class="col-lg-1 col-3">
+            T.TRACZYK
+        </div>
+        <div class="col-lg-6 d-none d-lg-block"></div>
+        <div class="col-1">
+            {% if locale == 'en' %}
+                <a href="/"><img src="{{ asset('pl_flag.svg.png') }}" alt="PL" class="flag-icon" title="{{ 'change_language'|trans }}" /></a>
+            {% else %}
+                <a href="/en"><img src="{{ asset('gb_flag.jpg') }}" alt="GB" class="flag-icon" title="{{ 'change_language'|trans }}" /></a>
+            {% endif %}
+        </div>
+        <div class="col-md-1 d-none d-md-block text-center">
+            <a href="#about-me">{{ 'about'|trans|upper }}</a>
+        </div>
+        <div class="col-md-1 d-none d-md-block">
+            <a href="#projects">{{ 'projects'|trans|upper }}</a>
+        </div>
+        <span class="nav-link dropdown-toggle d-md-none" style="cursor:pointer;" id="navbarDropdownMenuLink" role="button">
+            Menu
+        </span>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#about-me">{{ 'about'|trans|upper }}</a></li>
+            <li><a class="dropdown-item" href="#projects">{{ 'projects'|trans|upper }}</a></li>
+        </ul>
+    </nav>
+    <div id="main" class="main-section mb-5">
+        <div class="col-12 col-lg-8">
+            Symfony backend developer
+        </div>
+    </div>
+    <div class="symfony-block d-flex">
+    </div>
+    <div id="about-me" class="main-section">
+        <div class="row m-0">
+            <div class="col-12 col-sm-8 d-md-none">
+                <img src="{{ asset('profile.jpeg') }}" class="main-image" alt="my face :)"/>
+            </div>
+            <div class="col-md-8 col-12">
+                {{ 'about'|trans|capitalize }}
+                <p class="mt-5" style="font-size: 20px">
+                    {{ 'about-me-1'|trans }}<br>
+                    {{ 'about-me-2'|trans }}<br>
+                    {{ 'about-me-3'|trans }}
+                </p>
+            </div>
+            <div class="col-4 d-none d-md-block">
+                <img src="{{ asset('profile.jpeg') }}" class="main-image" alt="my face :)"/>
+            </div>
+        </div>
+    </div>
+    <div id="projects" class="main-section">
+        <div class="col-8 mb-5">
+            {{ 'projects'|trans|capitalize }}
+        </div>
+        {% include '_projectLeft.html.twig'
+            with
+            {
+                'projectImageSrc': asset('pso.png'),
+                'projectTitle': 'pso-title'|trans,
+                'projectDescription': 'pso-description'|trans,
+                'projectTechStack': 'pso-tech_stack'|trans
+            }
+        %}
+        {% include '_projectRight.html.twig'
+            with
+            {
+                'projectImageSrc': asset('cbre.png'),
+                'projectTitle': 'cbre-title'|trans,
+                'projectDescription': 'cbre-description'|trans,
+                'projectTechStack': 'cbre-tech_stack'|trans
+            }
+        %}
+        {% include '_projectLeft.html.twig'
+            with
+            {
+                'projectImageSrc': asset('flowtly.png'),
+                'projectTitle': 'flowtly-title'|trans,
+                'projectDescription': 'flowtly-description'|trans,
+                'projectTechStack': 'flowtly-tech_stack'|trans
+            }
+        %}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        window.onload = () => {
+            let cookieInfoBar = document.getElementById('cookie-law-info-bar');
+            if (!document.cookie) {
+                cookieInfoBar.classList.remove('d-none');
+            }
+
+            let dropdown = document.querySelector("[aria-labelledby='navbarDropdownMenuLink']");
+            document.getElementById('navbarDropdownMenuLink').addEventListener('click', () => {
+                if (dropdown.classList.contains('d-block')) {
+                    dropdown.classList.remove('d-block');
+                } else {
+                    dropdown.classList.add('d-block');
+                }
+            })
+
+            document.querySelectorAll('.dropdown-item').forEach(function (item) {
+                item.addEventListener('click', () => {
+                    dropdown.classList.remove('d-block');
+                })
+            })
+
+            document.getElementById('cookie-law-close-button').addEventListener('click', () => {
+                let expireDate = new Date();
+                expireDate.setTime(expireDate.getTime() + (30*24*60*60*1000));
+
+                document.cookie = 'cookie_law=true;expires=' + expireDate.toUTCString() + ';path=/';
+                cookieInfoBar.classList.add('d-none');
+            })
+        }
+    </script>
+{% endblock %}

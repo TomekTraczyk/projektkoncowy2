@@ -1,0 +1,23 @@
+about: 'about me'
+projects: 'projects'
+about-me-1: "I started my carrier in 2021 as intern in small software house, learning PHP."
+about-me-2: "From the start i loved the language as well as concept of building web applications, so for the first 2 months 
+I made every effort into learning, which resulted in my first serious job position, giving me opportunity to develop my skills in a real project."
+about-me-3:  "After over 2 years of developing web pages, I think of myself as intermediate Symfony developer, with good understanding and knowledge 
+of object-oriented programming, git, SQL data bases, Symfony, js, css and other tools used to develop web apps.
+Also I got to know technologies like docker, elasticsearch, redis, REST/SOAP api."
+pso-title: 'Platforma Opon'
+pso-description: "Platforma Opon is the biggest web page for bulk sale of tyres in Poland. Huge and maintained since 2012 project
+ was a quite challenge for me when i began working on it in 2022. Many files and legacy code taught me how working on big projects looks like.
+When i got to know the project better, I worked in small, 2 man team, so my responsibilities were everything between small visual fixes,
+to integration with external services like allegro or przelewy24 and creating logic behind buying 'subscription'."
+pso-tech_stack: "Symfony 4.2, PHP 7.4, PostgreSQL, Redis, ElasticSearch, Docker"
+cbre-title: "CBRE suppliers"
+cbre-description: "Short solo project of simple web app for managing and browsing suppliers. 
+App consists of catalog, creating and editing suppliers."
+cbre-tech_stack: "Symfony 6.2, PHP 8.0, MySQL, Docker"
+flowtly-title: "Flowtly"
+flowtly-description: "CRM web application. It was my first project, that I learned basics on, writing business logic
+ such as accepting free days from requesting workers, adding feedback option for workers and grouping free days."
+flowtly-tech_stack: "Symfony 6.2, PHP 8.0, MySQL"
+change_language: 'Change language to polish'
